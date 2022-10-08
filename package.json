@@ -1,0 +1,14 @@
+{
+  "name": "level-4",
+  "version": "1.0.0",
+  "description": "WD201 Level 4 Milestone",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "naman114",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.1.2"
+  }
+}
