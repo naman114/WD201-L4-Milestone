@@ -27,6 +27,10 @@ describe("Todolist Test Suite", () => {
     const yesterday = new Date();
     yesterday.setDate(now.getDate() - 1);
 
+    now.toLocaleDateString("en-CA");
+    tomorrow.toLocaleDateString("en-CA");
+    yesterday.toLocaleDateString("en-CA");
+
     add({
       title: "Water the plants",
       completed: false,
