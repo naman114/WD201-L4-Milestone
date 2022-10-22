@@ -21,20 +21,20 @@ const { all, add, markAsComplete, overdue, dueToday, dueLater } = todoList();
 
 describe("Todolist Test Suite", () => {
   beforeAll(() => {
+    const oneDay = 60 * 60 * 24 * 1000;
     const now = new Date();
-    const tomorrow = new Date();
-    tomorrow.setDate(now.getDate() + 1);
-    const yesterday = new Date();
-    yesterday.setDate(now.getDate() - 1);
-
-    now.toLocaleDateString("en-CA");
-    tomorrow.toLocaleDateString("en-CA");
-    yesterday.toLocaleDateString("en-CA");
+    const today = now.toLocaleDateString("en-CA");
+    const tomorrow = new Date(now.getTime() + 2 * oneDay).toLocaleDateString(
+      "en-CA"
+    );
+    const yesterday = new Date(now.getTime() - 2 * oneDay).toLocaleDateString(
+      "en-CA"
+    );
 
     add({
       title: "Water the plants",
       completed: false,
-      dueDate: now,
+      dueDate: today,
     });
     add({
       title: "Eat fruits",
