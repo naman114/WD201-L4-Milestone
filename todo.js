@@ -31,7 +31,7 @@ const todoList = () => {
           todoListText +=
             " " + new Date(listItem.dueDate).toISOString().split("T")[0];
 
-        return todoListText;
+        return todoListText.trim();
       })
       .join("\n");
   };
